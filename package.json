@@ -1,0 +1,25 @@
+{
+  "name": "bb-shortcut-websocket-server",
+  "version": "1.0.0",
+  "description": "WebSockets broadcaster helper app for BetBurger ARB shortcuts project",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack:osx": "electron-packager ./ $npm_package_productName --overwrite --out=dist/osx --platform=darwin --arch=x64 --icon=assets/build/osx/icon.icns",
+    "pack:win32": "electron-packager . $npm_package_productName --out=dist/win --platform=win32 --arch=ia32",
+    "pack:win64": "electron-packager . $npm_package_productName --out=dist/win --platform=win32 --arch=x64 --version=0.36.2 app-version=1.0 --icon=assets/build/win/icon.ico",
+    "build": "npm run pack:osx"
+  },
+  "author": "Viatcheslav Gachkaylo",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^5.0.13",
+    "electron-packager": "^14.2.1"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  }
+}
